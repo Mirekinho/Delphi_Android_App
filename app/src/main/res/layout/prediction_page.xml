@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PredictionPage">
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background2_description"
+        android:scaleType="centerCrop"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_bg_result" />
+
+    <TextView
+        android:id="@+id/resultView2"
+        android:layout_width="309dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:foregroundGravity="fill_horizontal"
+        android:justificationMode="inter_word"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/button2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/backgroundImageView"
+        app:layout_constraintVertical_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/backgroundImageView"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="179dp"
+        android:layout_height="59dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:color="?colorPrimary"
+        android:onClick=""
+        android:text="@string/return_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        tools:ignore="OnClick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

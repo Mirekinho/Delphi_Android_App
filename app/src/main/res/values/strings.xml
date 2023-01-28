@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Delphi</string>
+    <string name="prompt_text">Select your Zodiac sign:</string>
+    <string name="submit_button">Get Prediction</string>
+    <string name="background1_description">Background image of Delphi in night</string>
+    <string name="background2_description">Background image of Delphi in night with bonfire</string>
+    <string name="star_description">Image of selected constellation</string>
+    <string name="return_button">Go Back</string>
+    <integer name="selected_Zodiac">4</integer>
+    <string-array name="signs">
+        <item>Capricorn</item>
+        <item>Aquarius</item>
+        <item>Pisces</item>
+        <item>Aries</item>
+        <item>Taurus</item>
+        <item>Gemini</item>
+        <item>Cancer</item>
+        <item>Leo</item>
+        <item>Virgo</item>
+        <item>Libra</item>
+        <item>Scorpio</item>
+        <item>Sagittarius</item>
+    </string-array>
+</resources>

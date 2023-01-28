@@ -1,0 +1,2 @@
+rootProject.name = "Delphi"
+include ':app'
