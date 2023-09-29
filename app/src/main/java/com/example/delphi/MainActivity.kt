@@ -82,10 +82,12 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener { /
         try {
             val rslt = GlobalScope.async {
                 //Prepare and set string being sent over to the API
-                contactAztroAPI("https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign="
-                        + spinner.getItemAtPosition(spinner.selectedItemPosition) + "&day=today");
+                /*contactAztroAPI("https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign="
+                        + spinner.getItemAtPosition(spinner.selectedItemPosition) + "&day=today");*/
+                contactAztroAPI("https://newastro.vercel.app/"+ spinner.getItemAtPosition(spinner.selectedItemPosition).toString().lowercase());
             }.await()
             getPrediction(rslt);  //Edit and return the received prediction
+            //getPrediction(URL("https://newastro.vercel.app/").readText());  //Edit and return the received prediction
         }
         catch (e: Exception) {
             e.printStackTrace();
@@ -98,10 +100,9 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener { /
         try {
             connection = URL(apiUrl).openConnection() as HttpURLConnection; //Setting up connection with the API
             //Set request headers: host name, rapid-api key and content type
-            connection.setRequestProperty("x-rapidapi-host", "sameer-kumar-aztro-v1.p.rapidapi.com");
-            connection.setRequestProperty("x-rapidapi-key", "dbda9a4869msh6133e3fa67537cfp1d03dejsnc476b1a57bc6");
-            connection.setRequestProperty("content-type", "application/x-www-form-urlencoded");
-            connection.requestMethod = "POST";  //Set request method to POST
+            //connection.setRequestProperty("lang", "eng");
+            //connection.setRequestProperty("sign", "pisces");
+            //connection.requestMethod = "POST";  //Set request method to POST
             val reader = InputStreamReader(connection.inputStream); //Sets InputStreamReader
             var responseData = reader.read();   //Gets response data from reader
             while (responseData != -1) {    //Reads all data from reader
@@ -120,10 +121,13 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener { /
         try {
             val resultJson = JSONObject(result); //String to JSON object conversion
             // Setting up the zodiac string
+            /*zodiac ="Today's prediction:\n" +
+                    this.spinner.getItemAtPosition(spinner.selectedItemPosition).toString() +"\n"+
+                    resultJson.getString("sign")+"\n"+
+                    resultJson.getString("horoscope");*/
             zodiac ="Today's prediction:\n" +
                     this.spinner.getItemAtPosition(spinner.selectedItemPosition).toString() +"\n"+
-                    resultJson.getString("date_range")+"\n"+
-                    resultJson.getString("description");
+                    resultJson.getString("horoscope");
             setText(this.resultView,zodiac);
 
         } catch (e: Exception) {
