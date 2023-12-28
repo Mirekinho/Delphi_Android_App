@@ -35,6 +35,11 @@ android {
     viewBinding {
         enable = true
     }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
     namespace 'com.example.delphi'
 }
 
@@ -54,4 +59,5 @@ dependencies {
     //for ViewModelProvider
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
+    androidTestImplementation 'androidx.test:core:1.4.0'
 }

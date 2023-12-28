@@ -3,7 +3,9 @@ package com.example.delphi
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.prediction_page.*
+import kotlinx.android.synthetic.main.prediction_page.button2
+import kotlinx.android.synthetic.main.prediction_page.resultView2
+//import kotlinx.android.synthetic.main.prediction_page.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 

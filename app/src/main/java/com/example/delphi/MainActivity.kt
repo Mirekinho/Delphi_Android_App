@@ -7,12 +7,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+//import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import androidx.lifecycle.ViewModelProvider
 import com.example.delphi.ZodiacViewModel
 import com.example.delphi.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_main.spinner
 import org.json.JSONObject
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
