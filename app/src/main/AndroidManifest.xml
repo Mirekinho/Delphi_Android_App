@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.delphi">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- App permission for Internet access (for API calls) -->
     <uses-permission android:name="android.permission.INTERNET" />
 
